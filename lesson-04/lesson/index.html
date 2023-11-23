@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Site starts here 
+        загортаємо весь сайт в один тег div з класом wrapper-->
+
+    <!-- section, header, footer завжди обертаємо в div з класом container -->
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <img class="logo" src="" alt="" />
+          <nav class="nav">
+            <!-- є локальний та глобальний клас, link глобальний 
+        header__link локальний-->
+            <a class="link header__link" href="">Home</a>
+            <a class="link" href="">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <section class="hero">
+        <!-- first section class always hero, under header
+if nav in hero you don't need a header -->
+      </section>
+      <section class="about">
+        <div class="container">
+          <!-- дефолтні назви для заголовків title, sub-title, h1, h2... -->
+          <h2 class="title">Title</h2>
+          <!-- two defoult name for p "text" or "description"
+            on all page use the same name: text or description-->
+          <p class="text about__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+            voluptas numquam dicta eaque! Porro quia nemo quaerat eligendi harum
+            earum.
+          </p>
+          <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, in.
+          </p>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In,
+            dolorum.
+          </p>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+          <p class="description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptatem, esse.
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!--Site ends here-->
+  </body>
+</html>
