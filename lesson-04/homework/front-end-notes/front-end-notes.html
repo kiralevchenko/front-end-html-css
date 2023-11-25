@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-end нотатки</title>
+  </head>
+  <body>
+    <!-- page -->
+    <div class="wrapper">
+      <!-- header -->
+      <header class="header">
+        <div class="container">
+          <nav class="nav">
+            <ul class="nav__ul">
+              <li>
+                <a href="" class="nav__link">Питання зі співбесіді </a>
+              </li>
+              <li><a href="" class="nav__link"> Корисні нотатки </a></li>
+              <li><a href="" class="nav__link"> Гарячі клавіші </a></li>
+              <li><a href="" class="nav__link">Правила верстки</a></li>
+            </ul>
+          </nav>
+          <h1 class="h1">Front-end нотатки</h1>
+        </div>
+      </header>
+      <!-- header end-->
+      <!-- main -->
+      <main class="main">
+        <!-- section interview -->
+        <section class="interview">
+          <div class="container">
+            <h3 class="h3">Питання зі співбесіді</h3>
+            <ol class="questions">
+              <li>
+                <p class="question">Що таке HTML</p>
+                <p class="answer">
+                  Hyper Text Markup Language - мова розмітки гіпертексту, для
+                  перегляду вебсторінок у браузері
+                </p>
+              </li>
+
+              <li>
+                <p class="question">Що таке парні та непарні теги</p>
+                <p class="answer">
+                  Парні теги потрібно закривати, інакше браузер може некорректно
+                  відобразити їх вміст: p, div, a, h1<br />
+                  Непраня теги не мають тегу, що закриваеться і не мають вмісту:
+                  img, br, hr
+                </p>
+              </li>
+
+              <li>
+                <p class="question">Що таке блочні та лінійні елементи</p>
+                <p class="answer">
+                  Блочні займають всю ширину сторінки: div (король блочних
+                  елементів), p, h1..h6, table<br />
+                  Лінійні займають на сторінці лише всою ширину: span (король
+                  лінійних елементів), em, strong, img, button
+                </p>
+              </li>
+
+              <li>
+                <p class="question">Можуть запитати про формати фото</p>
+              </li>
+
+              <li>
+                <p class="question">Можуть попросити щось написати в codepen</p>
+              </li>
+
+              <li>
+                <p class="question">Які семантичні теги html5 знаєш</p>
+                <p class="answer">headern footer, aside, article, nav</p>
+              </li>
+
+              <li>
+                <p class="question">
+                  Скільки раз в рамках однієї сторінки можна використовувати h1
+                </p>
+                <p class="answer">Один раз</p>
+              </li>
+
+              <li>
+                <p class="question">
+                  Скільки раз в рамках однієї сторінки можна використовувати
+                  теги header, footer
+                </p>
+                <p class="answer">можуть бути в картках товарів, в статтях</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <!-- section interview end -->
+        <!-- section tips -->
+        <section class="tips">
+          <div class="container">
+            <h3 class="h3">Корисні нотатки</h3>
+            <ul class="tips__ul">
+              <li>
+                зробити Windows англійською - не буде помилок при зчитуванні
+                директорій, html не любить кириллицю
+              </li>
+              <li>
+                в Chrome create shortcut - open as window робить сайт як апку,
+                під тим юзером, підя яким ти сидиш
+              </li>
+              <li>пошук в гугл button+codepen - видає готові рішення</li>
+            </ul>
+          </div>
+        </section>
+        <!-- section tips end-->
+        <!-- hotkeys -->
+        <sectiom class="hotkeys">
+          <h3 class="h3">Гарячі клавіші</h3>
+          <ul class="hotkeys__ul">
+            <li>! tab або enter - деолтна розмітка</li>
+            <li>.text створює div з класом text</li>
+            <li>footer.text створює footer з класом text</li>
+          </ul>
+        </sectiom>
+        <!-- hotkeys end -->
+        <!-- section rules -->
+        <section class="rules">
+          <div class="container">
+            <h3 class="h3">Правила верстки</h3>
+            <ol class="rules__ul">
+              <li>
+                даємо назви (class) всім елементам, однаковим елементам можна
+                давати ідентичні назви
+              </li>
+              <li>завертаємо весь сайт в div з класом wrapper</li>
+              <li>
+                кожну секцію, крім main (section, article, footer, header)
+                завертаємо в div з класом container
+              </li>
+            </ol>
+            <img
+              src="./images/toni-stark-show.png"
+              alt="i believe in container"
+              width="300"
+            />
+          </div>
+        </section>
+        <!-- section rules end-->
+      </main>
+      <!-- main end -->
+
+      <!-- sidebar -->
+      <!-- додати посилання до кожного пункту -->
+      <aside class="sidebar">
+        <div class="container">
+          <section class="apps">
+            <h3 class="h3">Програми</h3>
+            <ul class="apps__ul">
+              <li>
+                <a href="" class="apps__link" target="_blank"
+                  >Visual Studio Code</a
+                >
+              </li>
+              <li><a href="" class="apps__link" target="_blank">Figma</a></li>
+            </ul>
+          </section>
+          <section class="singin">
+            <h3 class="h3">Сайти для реєстрації</h3>
+            <ul class="singin__ul">
+              <li><a href="" class="singin__link">linkedin</a></li>
+              <li><a href="" class="singin__link">DOU</a></li>
+              <li><a href="" class="singin__link">git</a></li>
+              <li>
+                <a href="" class="singin__link">github</a> або
+                <a
+                  href="./images/matrix-choose.png"
+                  target="_black"
+                  class="link"
+                >
+                  інший сервіс для зберігання проектів
+                </a>
+              </li>
+              <li>
+                <a href="" class="singin__link">codepen</a> (під аккаунтом git)
+                - можна шарити код (Save - код)
+              </li>
+              <li>
+                <a href="" class="singin__link">code sandbox</a> (під аккаунтом
+                git)
+              </li>
+              <li>
+                <a href="" class="singin__link">netlify</a> (під аккаунтом git)
+              </li>
+            </ul>
+          </section>
+          <section class="links">
+            <h3 class="h3">Посилання для роботи</h3>
+            <ul class="links__ul">
+              <li><a href="" class="links__link">can i use</a></li>
+              <li><a href="" class="links__link"></a></li>
+            </ul>
+          </section>
+        </div>
+      </aside>
+      <!-- sidebar end-->
+    </div>
+    <!-- page end -->
+  </body>
+</html>
