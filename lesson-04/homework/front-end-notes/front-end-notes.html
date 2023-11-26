@@ -14,7 +14,7 @@
           <nav class="nav">
             <ul class="nav__ul">
               <li>
-                <a href="" class="nav__link">Питання зі співбесіді </a>
+                <a href="" class="nav__link">Питання на співбесіді</a>
               </li>
               <li><a href="" class="nav__link"> Корисні нотатки </a></li>
               <li><a href="" class="nav__link"> Гарячі клавіші </a></li>
@@ -30,7 +30,7 @@
         <!-- section interview -->
         <section class="interview">
           <div class="container">
-            <h3 class="h3">Питання зі співбесіді</h3>
+            <h3 class="h3">Питання на співбесіді</h3>
             <ol class="questions">
               <li>
                 <p class="question">Що таке HTML</p>
@@ -85,7 +85,17 @@
                   Скільки раз в рамках однієї сторінки можна використовувати
                   теги header, footer
                 </p>
-                <p class="answer">можуть бути в картках товарів, в статтях</p>
+                <p class="answer">
+                  Немає обмежень, так як теги можуть бути в картках товарів, в
+                  статтях
+                </p>
+              </li>
+              <li>
+                <p class="question">
+                  Як змінювати розмір картинки в залежності від ширини двайсу
+                  без css
+                </p>
+                <p class="answer">Тег picture</p>
               </li>
             </ol>
           </div>
@@ -113,7 +123,7 @@
         <sectiom class="hotkeys">
           <h3 class="h3">Гарячі клавіші</h3>
           <ul class="hotkeys__ul">
-            <li>! tab або enter - деолтна розмітка</li>
+            <li>! tab або enter - дефолтна розмітка</li>
             <li>.text створює div з класом text</li>
             <li>footer.text створює footer з класом text</li>
           </ul>
@@ -133,6 +143,11 @@
                 кожну секцію, крім main (section, article, footer, header)
                 завертаємо в div з класом container
               </li>
+              <li>
+                якщо в проекті було десь використано max width, далі
+                використовуємо лише max width; max width - це desktop first
+                верстка; min width - це mobile first верстка
+              </li>
             </ol>
             <img
               src="./images/toni-stark-show.png"
@@ -149,6 +164,13 @@
       <!-- додати посилання до кожного пункту -->
       <aside class="sidebar">
         <div class="container">
+          <section class="important">
+            <h3 class="h3">Важливо знати</h3>
+            <ul class="important_ul">
+              <li>Англійську мову</li>
+              <li>Правила оптимізації сторінок</li>
+            </ul>
+          </section>
           <section class="apps">
             <h3 class="h3">Програми</h3>
             <ul class="apps__ul">
@@ -193,7 +215,7 @@
             <h3 class="h3">Посилання для роботи</h3>
             <ul class="links__ul">
               <li><a href="" class="links__link">can i use</a></li>
-              <li><a href="" class="links__link"></a></li>
+              <li><a href="" class="links__link">tiny PNG</a></li>
             </ul>
           </section>
         </div>

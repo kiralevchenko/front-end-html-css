@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture</title>
+  </head>
+  <body>
+    <!-- page start -->
+    <div class="wrapper">
+      <!-- section picture start -->
+      <section class="picture">
+        <div class="container">
+          <picture>
+            <source
+              media="(max-width: 450px)"
+              srcset="./images/small-photo-yellow.jpg"
+            />
+            <img src="./images/large-photo-violet.jpg" alt="" width="800" />
+          </picture>
+        </div>
+      </section>
+      <!-- section picture end -->
+      <!-- section 3 devices start -->
+      <section class="3 devices">
+        <div class="container">
+          <picture>
+            <!-- mobile - max width  -->
+            <source
+              media="(max-width: 576px)"
+              srcset="./images/3-pictures-small.jpg"
+            />
+            <!-- tablet - max width  -->
+            <source
+              media="(max-width: 1200px)"
+              srcset="./images/3-pictures-medium.jpg"
+            />
+            <img src="./images/3-pictures-large.jpg" alt="" width="800" />
+          </picture>
+        </div>
+      </section>
+      <!-- section 3 devices end -->
+
+      <!-- щоб автоматично закрити відкритий тег натискаємо стрілочку вліво (там де буква Б) -->
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis minima
+        sapiente quod ad provident enim amet corporis nam mollitia voluptate.
+        <img src="" alt="" />
+        <button></button>
+      </p>
+    </div>
+
+    <!-- page end -->
+  </body>
+</html>
