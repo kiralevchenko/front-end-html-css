@@ -3,7 +3,220 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Denis Novik</title>
   </head>
-  <body></body>
+  <body>
+    <!-- всі фото  окрім іконок в футері були зменшені за допомогою сервіса https://tinypng.com/ -->
+    <!-- page start -->
+    <div class="wrapper">
+      <!-- header start -->
+      <header class="header">
+        <div class="container">
+          <nav class="header__nav">
+            <ul class="header__ul">
+              <li><a href="" class="header__link">Home</a></li>
+              <li><a href="" class="header__link">About me</a></li>
+              <li><a href="" class="header__link">Skills</a></li>
+              <li><a href="" class="header__link">Portfolio</a></li>
+              <li><a href="" class="header__link">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- header end -->
+      <!-- hero start -->
+      <section class="hero">
+        <div class="container">
+          <h1 class="h1">Denis Novik</h1>
+
+          <picture class="hero__img">
+            <source
+              media="(max-width: 576px)"
+              srcset="./images/denis-novik-small.jpg"
+              width="470"
+            />
+            <source
+              media="(max-width: 992px)"
+              srcset="./images/denis-novik-medium.jpg"
+              width="670"
+            />
+            <img
+              src="./images/denis-novik.jpg"
+              alt="Denis Novik"
+              width="970px"
+            />
+          </picture>
+        </div>
+      </section>
+      <!-- hero end -->
+      <!-- about me start -->
+      <section class="about" style="background-color: #f6f6f6">
+        <div class="container">
+          <h2 class="h2">About me</h2>
+          <p class="text">
+            Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design
+            and everything connected with it.
+          </p>
+          <p class="text">
+            I'm studying at courses "Web and mobile design interfaces" in
+            IT-Academy.
+          </p>
+          <p class="text">
+            Ready to implement excellent projects with wonderful people.
+          </p>
+        </div>
+      </section>
+      <!-- about me end -->
+      <!-- skills start -->
+      <section class="skills">
+        <div class="container">
+          <h2 class="h2">Skills</h2>
+          <p class="text">I work in such programs as</p>
+          <!-- додати зображення -->
+
+          <picture class="skills__img">
+            <source
+              media="(max-width: 576px)"
+              srcset="./images/product-list-small.png"
+              width="470"
+            />
+            <source
+              media="(max-width: 992px)"
+              srcset="./images/product-list-medium.png"
+              width="670"
+            />
+            <img
+              src="./images/product-list.png"
+              alt="apps knowledge"
+              width="970"
+            />
+          </picture>
+        </div>
+      </section>
+      <!-- skills end -->
+      <!-- portfolio start -->
+      <section class="portfolio" style="background-color: #f6f6f6">
+        <div class="container">
+          <h2 class="h2">Portfolio</h2>
+          <picture class="portfolio__img">
+            <source
+              media="(max-width: 576px)"
+              srcset="./images/fashion-store-small.png"
+              width="470"
+            />
+            <source
+              media="(max-width: 992px)"
+              srcset="./images/fashion-store-medium.png"
+              width="670"
+            />
+            <img
+              src="./images/fashion-store.png"
+              alt="fashion store webpage"
+              width="970"
+            />
+          </picture>
+
+          <p class="text">
+            <a href="" class="portfolio__link"
+              >Online fashion store - Homepage</a
+            >
+          </p>
+
+          <picture class="portfolio__img">
+            <source
+              media="(max-width: 576px)"
+              srcset="./images/reebok-web-small.png"
+              width="470"
+            />
+            <source
+              media="(max-width: 992px)"
+              srcset="./images/reebok-web-medium.png"
+              width="670"
+            />
+            <img
+              src="./images/reebok-web.png"
+              alt="reebok store webpage"
+              width="970"
+            />
+          </picture>
+
+          <p class="text">
+            <a href="" class="portfolio__link">Reebok Store - Concept</a>
+          </p>
+
+          <picture class="portfolio__img">
+            <source
+              media="(max-width: 576px)"
+              srcset="./images/braun-landing-small.png"
+              width="470"
+            />
+            <source
+              media="(max-width: 992px)"
+              srcset="./images/braun-landing-medium.png"
+              width="670"
+            />
+            <img
+              src="./images/braun-landing.png"
+              alt="braun store webpage"
+              width="970"
+            />
+          </picture>
+
+          <p class="text">
+            <a href="" class="portfolio__link">Braun Landing Page - Concept</a>
+          </p>
+        </div>
+      </section>
+      <!-- portfolio end -->
+
+      <!-- contacts start -->
+      <footer class="contacts">
+        <div class="container">
+          <h2 class="h2">Contacts</h2>
+          <p class="text">Want to know more or just chat? You are welcome!</p>
+          <button
+            class="contacts__button"
+            width="148"
+            height="24"
+            style="background-color: #070707"
+          >
+            <span class="contacts__button__white" style="color: white"
+              >Send message</span
+            ></button
+          ><br />
+          <!-- додати зображення -->
+          <img
+            src="./images/linkedin.svg"
+            alt="linkedin"
+            class="contacts__img"
+            width="40"
+          />
+          <img
+            src="./images/instagram.png"
+            alt="instagram"
+            class="contacts__img"
+            width="40"
+          />
+          <img
+            src="./images/behance.png"
+            alt="behance"
+            class="contacts__img"
+            width="40"
+          />
+          <img
+            src="./images/dribbble.png"
+            alt="dribbble"
+            class="contacts__img"
+            width="40"
+          />
+          <p class="text">
+            Like me on<br />
+            LinkedIn, Instagram, Behance, Dribble
+          </p>
+        </div>
+      </footer>
+      <!-- contacts end -->
+    </div>
+    <!-- page end -->
+  </body>
 </html>
