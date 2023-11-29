@@ -3,7 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Form</title>
   </head>
-  <body></body>
+  <body>
+    <!-- page start -->
+    <div class="wrapper">
+      <!-- form start -->
+      <section class="firstform">
+        <div class="container">
+          <h1 class="firstform__h1">Form example</h1>
+          <form class="firstform__form">
+            <div class="firstform__text">
+              <label for="text01">Full name</label>
+              <input type="text" id="text01" />
+            </div>
+            <div class="firstform__email">
+              <label for="email01">Email</label>
+              <input type="email" id="email01" />
+            </div>
+            <div class="firstform__pass">
+              <label for="pass01">Password</label>
+              <input type="password" id="pass01" />
+            </div>
+            <div class="firstform__pass">
+              <label for="pass02">Password again</label>
+              <input type="password" id="pass02" />
+            </div>
+            <div class="firstform__radio">
+              <p class="text" style="display: inline">Sex</p>
+              <input type="radio" id="radio01" name="sex" />
+              <label for="radio01">male</label>
+              <input type="radio" id="radio02" name="sex" />
+              <label for="radio02">female</label>
+            </div>
+            <div class="firstform__age">
+              <label for="age01">Age</label>
+              <input type="number" id="age01" />
+            </div>
+            <div class="firstform__select">
+              <label for="sel01">Course</label>
+              <select id="sel01">
+                <option>-=select course=-</option>
+                <option>Front-End</option>
+                <option>Back-End</option>
+                <option>Project Management</option>
+                <option>QA Manual</option>
+              </select>
+            </div>
+            <div class="firstform__textarea">
+              <label for="area01">Full address</label>
+              <textarea id="area01" cols="30" rows="5"></textarea>
+            </div>
+            <div class="firstform__checkbox">
+              <input type="checkbox" id="check01" />
+              <label for="check01"
+                >I agree to the processing of personal data</label
+              >
+            </div>
+            <div class="firstform__buttons">
+              <button class="button" type="reset">Clear the form</button>
+              <button class="button" type="submit">Sign up</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- form end -->
+    </div>
+    <!-- page end -->
+  </body>
 </html>
