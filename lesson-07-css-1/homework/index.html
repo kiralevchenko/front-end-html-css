@@ -4,13 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denis Novik</title>
-    <!-- підключення шрифту, видалити -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nova+Square&display=swap"
-      rel="stylesheet"
-    />
+    <!-- підключення шрифтів для переірки, видалити -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,32 +13,37 @@
     />
     <!-- закінчення видалення -->
 
-    <!-- ПРОБЛЕМИ:
-           1. Не вирівнюється nav по вертикалі, зробила 
-           через padding: 20px 0;
-           але чи можна автоматично вирівняяти по вертикалі
-           тому що вміст інших  секцій не можу вирівняти по вертикалі
-           
-           2. Не додається лінія після nav через after, в h1 додала
+    <!-- Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Open Sans end-->
+
+    <!-- ПИТАННЯ / ПРОБЛЕМИ:
+          
+           1. Не додається лінія після nav через after, в h1 додала
            для тесту, спрацювало
            
-           3. Не обрізається картинка при зміні ширини екрану
+           2. Не обрізається картинка при зміні ширини екрану
              --div class="container" поставила overflow: hidden; і фото 
                на першому екрані тепер обрізається, але також тепер
                обрізаються іконки в skills
              -- в портфоліо в css поставила max-width: 100% картинка 
                почала зменшуватись при зменшенні екрану
            
-           4. В секції Skills при зменшенні ширини екрану, іконки
+           3. В секції Skills при зменшенні ширини екрану, іконки
            з текстом звужуються, а треба, щоб переносились
      -->
     <style>
       :root {
-        /* --main-font: Open Sans;
-        --sub-font: Open Sans; */
-        /* замінила щоб почати  чи працює, розкоментувати верхні */
-        --main-font: "Ephesis", cursive;
-        --sub-font: "Nova Square", sans-serif;
+        --main-font: Open Sans;
+        --sub-font: Open Sans;
+        /* замінила щоб почати  чи працює */
+        /* --main-font: "Ephesis", cursive;
+        --sub-font: "Nova Square", sans-serif; */
         /* кінець заміни */
 
         /* font colors */
@@ -58,13 +57,12 @@
         --color-social-active: #315ee4;
         --color-link-button: #070707;
 
-        /* fonts -- перевірити міжрядковий інтервал?*/
+        /* fonts -- перевірити міжрядковий інтервал */
 
         --title-font: 700 48px / normal var(--main-font);
         --subtitle-font: 700 34px / normal var(--main-font);
-        --link-font: ; /* додати опції */
         --p-font: 400 18px / normal var(--sub-font);
-        --button-font: ; /* додати опції */
+        --button-font: 700 18px / normal var(--sub-font);
 
         /* stars */
         --color-star-gray: #e5e5e5;
@@ -78,7 +76,9 @@
         margin: 0;
         box-sizing: border-box;
       }
-
+      .link {
+        text-decoration: none;
+      }
       /* global */
       .wrapper {
         max-width: 1440px;
@@ -88,8 +88,11 @@
         max-width: 970px;
         margin: 0 auto;
         overflow: hidden;
+        /* висота div по висоті секції автоматично (1 лінія)*/
+        /* height: inherit; */
       }
-      .text {
+      .text,
+      .link {
         font: var(--p-font);
         text-align: center;
       }
@@ -105,22 +108,22 @@
       section:nth-child(odd) {
         background-color: var(--background-gray);
       }
-      /* test option -- працює
-      h1::after {
+      /* test option -- працює */
+      /* h1::after {
         content: "";
         display: block;
         height: 10px;
         background-color: red;
-      }
-      */
+      } */
 
       /* header */
+
       .header {
         max-width: 1440px;
         height: 80px;
         margin: 0 auto;
       }
-      /* через ширину  колонки іноді переносить
+      /* через ширину колонки переносить
       на новий рядок me в пункті About me */
       .header__nav {
         gap: 40px;
@@ -138,6 +141,7 @@
         color: var(--color-black);
         cursor: pointer;
       }
+      /* не працює */
       nav::after {
         content: "";
         display: block;
@@ -146,6 +150,7 @@
       }
 
       /* first screen */
+
       .firstscreen {
         max-width: 1440px;
         height: 497px;
@@ -160,7 +165,10 @@
       .aboutme {
         max-width: 1440px;
         height: 500px;
-        vertical-align: middle;
+        /* вирівняти вертикально та горизонтально (3 лінії) */
+        display: grid;
+        align-items: center;
+        text-align: center;
       }
       .aboutme__grid {
         display: grid;
@@ -170,11 +178,15 @@
       }
 
       /* skills */
-      /* портібно вирівняти контент блоку по висоті - не знаю як */
+
       .skills {
         max-width: 1440px;
         height: 564px;
         margin: 0 auto;
+        /* вирівняти вертикально та горизонтально (3 лінії) */
+        display: grid;
+        align-items: center;
+        text-align: center;
       }
       .skills__subtitle {
         padding: 0 0 20px;
@@ -186,17 +198,23 @@
       }
       .appsrow__item {
         width: 170px;
+        /* вирівнювання всього в контенері по центру
+        в тому числі іконок (4 лінії)*/
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
       }
       .skills__text {
         padding: 0 0 50px;
       }
       .appsrow_text {
         padding: 25px 0 60px;
+        color: var(--color-link-grey);
       }
       .appsrow__item > p {
         height: 128px;
       }
-      /* як вирівняти іконки по центру? */
       .appsrow__img {
         width: 80px;
         height: 80px;
@@ -215,11 +233,15 @@
       }
 
       /*  portfolio */
-      /* портібно вирівняти контент блоку по висоті - не знаю як */
+
       .portfolio {
         max-width: 1440px;
         height: 2268px;
         margin: 0 auto;
+        /* вирівняти вертикально та горизонтально (3 лінії) */
+        display: grid;
+        align-items: center;
+        text-align: center;
       }
       .portfolio__grid {
         display: grid;
@@ -237,7 +259,11 @@
       .contacts {
         margin: 0 auto;
         max-width: 1440px;
-        height: 400px;
+        height: 600px;
+        /* вирівняти вертикально та горизонтально (3 лінії) */
+        display: grid;
+        align-items: center;
+        text-align: center;
       }
       .socialrow__svg {
         fill: var(--color-social-black);
@@ -246,14 +272,35 @@
       .socialrow__svg:hover {
         fill: var(--color-social-active);
         stroke: var(--color-social-active);
+        transform: scale(2);
         cursor: pointer;
         transition: 0.5s;
       }
-      /* як вирівняти іконки, що завернуті в лінки по центру сторінки? */
       .socialrow__link {
-        text-decoration: none;
-        text-align: center;
         max-width: 310px;
+      }
+      .contacts__text {
+        padding: 0 0 60px;
+      }
+      .contacts__button {
+        width: 180px;
+        height: 44px;
+        padding: 8px 26px;
+        border-radius: 22px;
+        background-color: var(--color-link-button);
+        margin: 0 auto;
+      }
+      .contacts__link {
+        font: var(--button-font);
+        color: var(--color-white);
+        text-align: center;
+      }
+      .contacts__socialrow {
+        padding: 30px 0 60px;
+        margin: 0 auto;
+        display: flex;
+        /* розтягнути іконки по ширині контейнеру (1 лінія) */
+        justify-content: space-around;
       }
     </style>
   </head>
@@ -264,11 +311,11 @@
       <header class="header">
         <div class="container">
           <nav class="header__nav">
-            <a href="" class="header__link">Home</a>
-            <a href="" class="header__link">About me</a>
-            <a href="" class="header__link">Skills</a>
-            <a href="" class="header__link">Portfolio</a>
-            <a href="" class="header__link">Contacts</a>
+            <a href="" class="link header__link">Home</a>
+            <a href="" class="link header__link">About me</a>
+            <a href="" class="link header__link">Skills</a>
+            <a href="" class="link header__link">Portfolio</a>
+            <a href="" class="link header__link">Contacts</a>
           </nav>
         </div>
       </header>
@@ -717,16 +764,18 @@
             Want to know more or just chat? <br />
             You are welcome!
           </p>
-          <a href="" class="link contacts__link"></a>
+          <a href="" class="link contacts__link"
+            ><div class="contacts__button">Send message</div></a
+          >
           <div class="socialrow contacts__socialrow">
-            <a href="" class="socialrow__link">
+            <a href="" class="link socialrow__link">
               <img
                 src="./images/6-1-linkedin.svg"
                 alt=""
                 class="socialrow__img"
               />
             </a>
-            <a href="" class="socialrow__link">
+            <a href="Send message" class="link socialrow__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
@@ -741,7 +790,7 @@
               </svg>
             </a>
 
-            <a href="" class="socialrow__link">
+            <a href="" class="link socialrow__link">
               <img
                 src="./images/6-3-behance.svg"
                 alt=""
@@ -749,7 +798,7 @@
               />
             </a>
 
-            <a href="" class="socialrow__link">
+            <a href="" class="link socialrow__link">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"
