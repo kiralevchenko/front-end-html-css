@@ -17,27 +17,28 @@
       :root {
         /* fonts */
         --main-font: "Roboto", sans-serif;
-        --sub-font: "Roboto", sans-serif;
+        --sub-font: var(--main-font);
 
         /* fonts color */
-        --font-red: #ff8984;
-        --font-white: #ffffff;
-        --font-gray: #9b96ac;
+        --font-red-color: #ff8984;
+        --font-white-color: #ffffff;
+        --font-gray-color: #9b96ac;
 
         /* background color */
-        --header-gray: #4a4f56;
-        --body-gray: #3b3f45;
-        --list-light-gray: #88839e;
-        --list-midium-gray: #7a7593;
-        --list-dark-gray: #625e77;
-        --button-gray: #4a4f56;
+        --header-gray-color: #4a4f56;
+        --body-gray-color: #3b3f45;
+        --list-light-gray-color: #88839e;
+        --list-midium-gray-color: #7a7593;
+        --list-dark-gray-color: #625e77;
+        --list-active-red-color: var(--font-red-color);
+        --button-gray-color: var(--header-gray-color);
 
         /* font text */
-        --font-title: 700 24px / normal var(--main-font);
-        --font-sub-title: 400 16px / normal var(--main-font);
-        --font-list-large: 400 18px / normal var(--sub-font);
-        --font-list-small: 400 11px / normal var(--sub-font);
-        --font-button: 400 18px / normal var(--sub-font);
+        --font-title: 700 24px/24px var(--main-font);
+        --font-sub-title: 400 16px/24px var(--main-font);
+        --font-list-large: 400 18px/24px var(--sub-font);
+        --font-list-small: 400 11px/18px var(--sub-font);
+        --font-button: 400 18px/24px var(--sub-font);
       }
 
       /* reset */
@@ -47,18 +48,197 @@
         margin: 0;
         box-sizing: border-box;
       }
+
+      link {
+        text-decoration: none;
+      }
+
+      body {
+        background-color: var(--body-gray-color);
+        font: var(--main-font);
+        color: var(--font-white-color);
+      }
+      .wrapper {
+        max-width: 793px;
+        max-height: 507px;
+        margin: 0 auto;
+      }
+
+      .header {
+        width: 793px;
+        height: 82px;
+        background-color: var(--header-gray-color);
+        color: var(--font-red-color);
+        padding: 19px 0 12px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .header__title {
+        margin-bottom: 4px;
+        font: var(--font-title);
+      }
+
+      .container {
+        max-width: 534px;
+        /* робимо по центру текст */
+        margin: 0 auto;
+        font: var(--font-sub-title);
+      }
+
+      .list {
+        margin-bottom: 46px;
+      }
+      .list__item {
+        background-color: var(--list-light-gray-color);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        padding-left: 9px;
+      }
+      .list__item:hover {
+        background-color: var(--list-dark-gray-color);
+        border-top: 3px solid var(--font-white-color);
+        border-bottom: 3px solid var(--font-white-color);
+      }
+      .list__item:nth-child(even) {
+        background-color: var(--list-midium-gray-color);
+      }
+      .list__item:active {
+        background-color: var(--font-red-color);
+      }
+      .list__check {
+        width: 19px;
+        height: 19px;
+      }
+      .list__check:checked + .list__label span {
+        color: var(--font-gray-color);
+        text-decoration: line-through;
+      }
+      .list__label {
+        width: 534px;
+        height: 45px;
+        padding: 9px;
+        cursor: pointer;
+        transition: 0, 5s ease-in;
+      }
+      .list__largetext {
+        font: var(--font-list-large);
+      }
+      .list__smalltext {
+        font: var(--font-list-small);
+      }
+      .list__smalltext:before {
+        content: "(";
+      }
+      .list__smalltext:after {
+        content: ")";
+      }
+      .buttonlink {
+        margin: 0 auto;
+        max-width: 534px;
+        height: 45px;
+        color: var(--font-red-color);
+        text-align: center;
+        background-color: var(--button-gray-color);
+        padding: 11px 0;
+        font: var(--font-button);
+      }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
         <div class="container">
-          <h1 class="title"></h1>
+          <h1 class="header__title">CSS Dinner Shopping List</h1>
+          <p class="header__text">Let’s go to the mall!</p>
         </div>
       </header>
-      <section class="list">
-        <div class="container"></div>
-      </section>
+      <div class="list">
+        <div class="container">
+          <!-- item 1 start -->
+          <div class="list__item">
+            <input type="checkbox" id="check01" class="list__check" />
+            <label for="check01" class="list__label">
+              <p class="list__labeltext">
+                <span class="list__largetext"> A lot of pickles</span>
+                <span class="list__smalltext">
+                  for the next lessons about CSS
+                </span>
+              </p>
+            </label>
+          </div>
+          <!-- item 2 end -->
+          <!-- item 2 start -->
+          <div class="list__item">
+            <input type="checkbox" id="check02" class="list__check" />
+            <label for="check02" class="list__label">
+              <p class="list__labeltext">
+                <span class="list__largetext"> A lot of pickles</span>
+                <span class="list__smalltext">
+                  for the next lessons about CSS
+                </span>
+              </p>
+            </label>
+          </div>
+          <!-- item 3 end -->
+          <!-- item 3 start -->
+          <div class="list__item">
+            <input type="checkbox" id="check03" class="list__check" />
+            <label for="check03" class="list__label">
+              <p class="list__labeltext">
+                <span class="list__largetext"> A lot of pickles</span>
+                <span class="list__smalltext">
+                  for the next lessons about CSS
+                </span>
+              </p>
+            </label>
+          </div>
+          <!-- item 3 end -->
+          <!-- item 4 start -->
+          <div class="list__item">
+            <input type="checkbox" id="check04" class="list__check" />
+            <label for="check04" class="list__label">
+              <p class="list__labeltext">
+                <span class="list__largetext"> A lot of pickles</span>
+                <span class="list__smalltext">
+                  for the next lessons about CSS
+                </span>
+              </p>
+            </label>
+          </div>
+          <!-- item 4 end -->
+          <!-- item 5 start -->
+          <div class="list__item">
+            <input type="checkbox" id="check05" class="list__check" />
+            <label for="check05" class="list__label">
+              <p class="list__labeltext">
+                <span class="list__largetext"> A lot of pickles</span>
+                <span class="list__smalltext">
+                  for the next lessons about CSS
+                </span>
+              </p>
+            </label>
+          </div>
+          <!-- item 5 end -->
+          <!-- item 6 start -->
+          <div class="list__item">
+            <input type="checkbox" id="check06" class="list__check" />
+            <label for="check06" class="list__label">
+              <p class="list__labeltext">
+                <span class="list__largetext"> A lot of pickles</span>
+                <span class="list__smalltext">
+                  for the next lessons about CSS
+                </span>
+              </p>
+            </label>
+          </div>
+          <!-- item 6 end -->
+        </div>
+      </div>
+      <a href="" class="link"><div class="buttonlink">Bon appetit :)</div></a>
     </div>
   </body>
 </html>
